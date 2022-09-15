@@ -47,6 +47,7 @@ const typeController = (e) => {
       newLetter === " " ? "▪" : newLetter
     }</span>`;
   } else {
+    errorCount++;
     display.innerHTML += `<span class="red">${
       newLetter === " " ? "▪" : newLetter
     }</span>`;
@@ -71,12 +72,12 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = Math.floor((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
-  resultModal.classList.toggle("hidden");
-  modalBackground.classList.toggle("hidden");
+  resultModal.classList.remove("hidden");
+  modalBackground.classList.remove("hidden");
   // clear user text
   display.innerHTML = "";
   // make it inactive
