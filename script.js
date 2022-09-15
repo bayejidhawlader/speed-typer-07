@@ -96,6 +96,7 @@ const gameOver = () => {
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+  fetchData();
 };
 
 const closeModal = () => {

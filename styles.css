@@ -63,10 +63,10 @@ body {
 }
 #result {
   position: fixed;
-  top: 10%; 
-  left: 10%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  height: 250px;
+  height: 240px;
   width: 400px;
   background-color: #171717;
   border-radius: 15px;
@@ -75,7 +75,7 @@ body {
   text-align: center;
   padding: 2rem;
 }
-#show-time{
+#show-time {
   text-align: center;
   color: white;
   margin: 10px 0;
@@ -142,9 +142,9 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
@@ -152,8 +152,8 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
@@ -164,7 +164,7 @@ button {
     rgba(255, 255, 255, 0.05) 99.85%
   );
   backdrop-filter: blur(5px);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 #modal-background {
@@ -181,6 +181,15 @@ button {
   top: 0;
 }
 
+#blog-text {
+  text-align: center;
+}
+#blog-text a {
+  color: #9dffad;
+  font-size: 20px;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
@@ -188,5 +197,23 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+  #result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 320px;
+  }
+  button {
+    width: 200px;
+    height: 50px;
+    margin-top: 15px;
+  }
+  #histories {
+    /* display: grid; */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 }
