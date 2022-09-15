@@ -181,10 +181,12 @@ button {
   top: 0;
 }
 
-#blog-text {
+#blog-text,
+.blog-text {
   text-align: center;
 }
-#blog-text a {
+#blog-text a,
+.blog-site-home-button {
   color: #9dffad;
   font-size: 20px;
   text-decoration: none;
@@ -217,3 +219,5 @@ button {
     gap: 20px;
   }
 }
+
+/* Blog dot Html */
